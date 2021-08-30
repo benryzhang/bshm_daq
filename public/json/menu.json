@@ -1,0 +1,22 @@
+﻿
+{"code":200,"msg":"成功","data":
+    [{"id":1,"parentId":0,"menuName":"系统首页","url":"/home","icon":"el-icon-s-home","orderNum":1,"open":1,"disabled":false,"perms":null,"type":0,
+        "children":[
+        
+    ]},
+    {"id":2,"parentId":0,"menuName":"采集设备信息","url":"/equipment","icon":"el-icon-box","orderNum":2,"open":1,"disabled":false,"perms":null,"type":0,
+        "children":[]},
+    {"id":3,"parentId":0,"menuName":"传感器信息","url":"/sensor","icon":"el-icon-tickets","orderNum":3,"open":1,"disabled":false,"perms":null,"type":0,
+        "children":[]},
+    {"id":4,"parentId":0,"menuName":"状态信息","url":"/status","icon":"el-icon-document-copy","orderNum":3,"open":1,"disabled":false,"perms":null,"type":0,
+        "children":[
+            
+    ]},
+    {"id":5,"parentId":0,"menuName":"系统高级管理","url":"/site","icon":"el-icon-s-tools","orderNum":4,"open":1,"disabled":false,"perms":null,"type":1,
+        "children":[{"id":365,"parentId":312,"menuName":"采集站配置","url":"/site","icon":"el-icon-arrow-right","orderNum":1,"open":1,"disabled":false,"perms":"","type":0,"children":[]},
+                    {"id":364,"parentId":312,"menuName":"数据分库存储","url":"/stored","icon":"el-icon-arrow-right","orderNum":2,"open":0,"disabled":false,"perms":"","type":0,"children":[]}
+                    
+    ]}
+    
+       
+]}
