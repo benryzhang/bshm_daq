@@ -149,10 +149,11 @@ export default {
 <style>
 #data-view {
 	width: 100%;
-	height: 100%;
-  /* background-color: #030409; */
-  background-image: url(../../assets/img/viewbg.png);
-  background-size: cover;
+  height: 100%;
+  background:#030409;
+  /* background-color: #030409; 
+  background-image: url(../../assets/img/bggif.png);
+  background-size: cover; */
 	color: #fff
 }
 

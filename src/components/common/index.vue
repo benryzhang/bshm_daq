@@ -238,5 +238,5 @@ export default {
 .el-submenu .el-menu-item:hover{background-color: #C0C4CC;}
 .el-aside .el-menu--collapse{width:44px;}
 .el-aside .el-menu-vertical-demo,.el-submenu, .el-menu,.el-submenu .el-menu,.is-opened,.el-menu--vertical .el-menu--popup{background-color: #303133;border-right: none;}
-.el-main{padding: 0 !important;}
+/* .el-main{padding: 0 !important;} */
 </style>
