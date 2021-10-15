@@ -6,6 +6,12 @@
         <span class="sysname">
           <img src="../../assets/img/logo.png" class="logo"  /> 通用数据采集综合平台
         </span>
+        
+      </div>
+      <div>
+      <span class="datav" @click="toDataview">
+          <label>数据可视化</label>
+        </span>
       </div>
       <el-dropdown>
         <div class="block">
@@ -13,7 +19,7 @@
         </div>
         <el-dropdown-menu slot="dropdown" trigger="click">
            <el-dropdown-item>
-             <span type="danger"  @click="toWelcome"><span class="el-icon-house"></span> &nbsp;系统首页</span>
+             <span type="danger"  @click="toDataview"><span class="el-icon-house"></span> &nbsp;系统首页</span>
           </el-dropdown-item>
 
 
@@ -137,8 +143,8 @@ export default {
     /**
      * 去系统首页
      */
-    toWelcome(){
-      this.$router.push("/index");
+    toDataview(){
+      this.$router.push("/dataview");
     },
     /**
       加载菜单数据
@@ -199,7 +205,8 @@ export default {
 
 /* 为对应的路由跳转时设置动画效果 */
 
-.sysname { line-height: 60px; font-size: 20px; height: 60px; display: block;}
+.sysname { line-height: 60px; font-size: 20px; height: 60px; display: block;float: left;}
+.datav{float: right;}
 .logo{ float: left; display: block; margin-left: 10px;}
 .el-header {
   background-color: #303133;
@@ -239,4 +246,7 @@ export default {
 .el-aside .el-menu--collapse{width:44px;}
 .el-aside .el-menu-vertical-demo,.el-submenu, .el-menu,.el-submenu .el-menu,.is-opened,.el-menu--vertical .el-menu--popup{background-color: #303133;border-right: none;}
 /* .el-main{padding: 0 !important;} */
+.datav{width: 70px;height:60px;background: url(../../assets/img/datav.png) no-repeat center 8px; cursor: pointer;position: absolute; top: 0; right: 65px;}
+
+.datav label {font-size:14px;padding-top: 36px;display: block;cursor: pointer;}
 </style>

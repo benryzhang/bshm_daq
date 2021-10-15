@@ -58,7 +58,7 @@
        
       </el-form-item>
     </el-form>
-    <div class="copyright">@copy智性科技南通有限公司 2020</div>
+    <div class="copyright">@copy智性科技南通有限公司 2021</div>
   </div>
 
 </template>

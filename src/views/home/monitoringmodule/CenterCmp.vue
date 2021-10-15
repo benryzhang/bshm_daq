@@ -6,7 +6,13 @@
             系统综合管理平台
           </dv-border-box-2> -->
       <div class="cc-title">通用数据采集综合展示平台</div>
-          <div class="cc-time" >{{nowTime}}</div>
+      <div class="cc-right">
+        <div class="cc-time" >{{nowTime}}</div>
+        <!-- <button class="btn button button--tamaya button--round-s button--text-thick button--border-thin" data-text="进入综合管理平台"></button> -->
+        <button class="btn button button--aylen button--border-medium button--inverted button--text-upper button--size-m" data-text="进入综合管理平台" @click="addRoutes"><span>进入综合管理平台</span></button>
+          <!-- <div class="cc-system" >进入综合管理平台</div> -->
+          
+           </div>
       <!-- <dv-decoration-1 style="width:200px;height:50px;" /> -->
 
     </div>
@@ -63,6 +69,9 @@ export default {
         },
         
         methods: {
+          addRoutes () {
+            this.$router.push('/home')
+          },
           // 定义自定义覆盖物的构造函数  
 // SquareOverlay(center, length, color){
 //     this._center = center;
@@ -247,11 +256,266 @@ export default {
     transform: translateX(-50%);
   }
 }
-.cc-time{    line-height: 44px;font-size: 16px; color:#fff;padding-top:20px;}
-.cc-title{width:50%;text-align: center;}
+.cc-time{    line-height: 24px;font-size: 16px; color:#fff;padding-top:0px;}
+.cc-right{width:43%;float: right;}
+.cc-title{width:100%;text-align: center;}
+.cc-system{width:100%;text-align: center;font-size: 16px; color:#fff;padding-top:10px;cursor: pointer;
+ 
+	// width: 200px;
+	// height: 100px;
+	// color: #fff;
+	// background-color: #6496c8;
+	// border: none;
+	// border-radius: 15px;
+	// box-shadow: 0 10px #27496d;
+}
+.btn {
+  //padding: 4.5em 0;
+    // display: -webkit-flex;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-flex-wrap: wrap;
+    // -ms-flex-wrap: wrap;
+    // flex-wrap: wrap;
+    // -webkit-justify-content: center;
+    // justify-content: center;
+    width:100%;
+    display: block;
+
+}
+/* Box colors */
+.bg-1 {
+	background: #ECEFF1;
+	color: #37474f;
+}
+.bg-2 {
+	background: #7986cb;
+	color: #ECEFF1;
+}
+.bg-3 {
+	background: #37474f;
+	color: #fff;
+}
+
+/* Common button styles */
+.button {
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	//margin: 1em;
+	padding: 0.4em 0em;
+	border: none;
+	background: none;
+	color: inherit;
+	//vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	//-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+
+}
+.button:focus {
+	outline: none;
+}
+.button > span {
+	vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+	color: #37474f;
+	border-color: #37474f;
+}
+.bg-2 .button {
+	color: #ECEFF1;
+	border-color: #ECEFF1;
+}
+.bg-3 .button {
+	color: #fff;
+	border-color: #fff;
+}
+
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+.button--size-m {
+	font-size: 16px;
+}
+.button--size-l {
+	font-size: 18px;
+}
+
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* Typography and Roundedness */
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.button--text-thin {
+	font-weight: 300;
+}
+.button--text-medium {
+	font-weight: 500;
+}
+.button--text-thick {
+	font-weight: 600;
+}
+.button--round-s {
+	border-radius: 5px;
+}
+.button--round-m {
+	border-radius: 15px;
+}
+.button--round-l {
+	border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+	border: 1px solid #fff;
+}
+.button--border-medium {
+	border: 2px solid #fff;
+}
+.button--border-thick {
+	border: 3px solid #fff;
+}
+/* Aylen */
+.button.button--aylen {
+	background: #fff;
+	color: #37474f;
+	overflow: hidden;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+.button--aylen.button--inverted {
+	background: none;
+	color: #fff;
+}
+.button--aylen::before,
+.button--aylen::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 100%;
+	left: 0;
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--aylen::before {
+	background: #096dd9;
+}
+.button--aylen::after {
+	background: #3f51b5;
+}
+.button--aylen:hover {
+	color: #fff;
+}
+.button--aylen:hover::before,
+.button--aylen:hover::after {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button--aylen:hover::after {
+	-webkit-transition-delay: 0.175s;
+	transition-delay: 0.175s;
+}
+/* Tamaya */
+.button--tamaya {
+	overflow: hidden;
+	//color: #7986cb;
+	//min-width: 100%;
+}
+.button--tamaya.button--inverted {
+	color: #37474f;
+	border-color: #37474f;
+}
+.button--tamaya::before,
+.button--tamaya::after {
+	content: attr(data-text);
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	background: #7986cb;
+	color: #fff;
+	overflow: hidden;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--tamaya.button--inverted::before,
+.button--tamaya.button--inverted::after {
+	background: #fff;
+	color: #37474f;
+}
+.button--tamaya::before {
+	top: 0;
+	padding-top: 1em;
+}
+.button--tamaya::after {
+	bottom: 0;
+	line-height: 0;
+}
+.button--tamaya > span {
+	display: block;
+	-webkit-transform: scale3d(0.2, 0.2, 1);
+	transform: scale3d(0.2, 0.2, 1);
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--tamaya:hover::before {
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+}
+.button--tamaya:hover::after {
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+}
+.button--tamaya:hover > span {
+	opacity: 1;
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+// .btn-1 {
+//   //color: #9c89f7;
+// }
+// .btn-1:hover {
+//   -webkit-animation: halftone 1s forwards;
+//           animation: halftone 1s forwards;
+//   background: -webkit-radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 0 0/1.25em 1.25em, -webkit-radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 6.25em 6.25em/1.25em 1.25em;
+//   background: radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 0 0/1.25em 1.25em, radial-gradient(circle, #9c89f7 0.2em, rgba(0, 0, 0, 0) 0.25em) 6.25em 6.25em/1.25em 1.25em;
+//   color: #e4f789;
+// }
+@-webkit-keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
+}
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
+}
 
 
-.bm-view{width: 1004px;height: 580px;}
+
+.bm-view{width: 100%;height: 580px;}
 
 .BMap_cpDctrl {
     display:none;

@@ -4,7 +4,7 @@ import login from '../components/longin.vue'
 import NotPermission from '../components/401.vue'
 
 import index from '../components/common/index.vue'
-import home from '../views/home/About.vue'
+import home from '../views/home/Home.vue'
 import dataview from '../views/home/About.vue'
 import site from '../views/setup/site.vue'
 import stored from '../views/setup/stored.vue'
